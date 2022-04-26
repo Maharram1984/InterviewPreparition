@@ -42,16 +42,16 @@ ArrayList<Integer> list = new ArrayList(); */
         for (int i = 0; i <arr.length; i++)
         {
             small = i;
-            for (int j = i ; j <= arr.length-1; j++)
+            for (int j = i +1 ; j <= arr.length-1; j++)
             {
-                if (arr[j] > arr[small])
+                if (arr[j] < arr[small])
                 {
                     small = j;
                 }
                 //swap values
             }
-            int temp = arr[i];
-            arr[i] = arr[small];
+            int temp = arr[i];//5
+            arr[i] = arr[small];//3
             arr[small] = temp;
         }
 
